@@ -1,3 +1,5 @@
+import 'package:abzpos_flutter/pages/login/left_side.dart';
+import 'package:abzpos_flutter/pages/login/right_side.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -14,14 +16,13 @@ class _LoginPageState extends State<LoginPage> {
       body: Center(
         child: Row(
           children: [
-            Expanded(
-              child: const Text("asd"),
-              flex: 1,
+            LeftSideWidget(),
+            VerticalDivider(
+              width: 5.0,
+              thickness: 10.0,
+              color: Colors.black,
             ),
-            Expanded(
-              child: const Text("asd"),
-              flex: 1
-            ),
+            RightSideWidget()
           ]
         )
       ),

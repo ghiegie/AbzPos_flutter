@@ -1,3 +1,4 @@
+import 'package:abzpos_flutter/pages/interface/interface.dart';
 import 'package:abzpos_flutter/pages/login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -12,7 +13,7 @@ class App extends StatelessWidget {
         routes: [
           GoRoute(
             path: "/",
-            builder: _mainBuilder
+            builder: _interfaceBuilder
           )
         ]
       ),
@@ -21,5 +22,9 @@ class App extends StatelessWidget {
 
   Widget _mainBuilder(BuildContext ctx, GoRouterState state) {
     return LoginPage();
+  }
+
+  Widget _interfaceBuilder(BuildContext ctx, GoRouterState state) {
+    return MainInterface();
   }
 }
