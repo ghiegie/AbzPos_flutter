@@ -14,47 +14,43 @@ class _LeftSideWidgetState extends State<LeftSideWidget> {
       child: Center(
         child: Container(
           padding: EdgeInsets.all(10.0),
-          color: Colors.amberAccent,
-          child: Container(
-            color: Colors.blueAccent,
-            child: Column(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.black)
-                  ),
-                  child: Image(
-                    image: AssetImage("assets/logo.png")
-                  ),
+          child: Column(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.black)
                 ),
-
-                Expanded(child: SizedBox(height: double.maxFinite)),
-            
-                Row(
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text("asdasdasdasdasd"),
-                        const Text("azxczq"),
-                        const Text("qweqweqweqwe"),
-                      ]
-                    ),
-
-                    SizedBox(width: 10.0),
-
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text("asdasd"),
-                        const Text("asdasd"),
-                        const Text("asdasd"),
-                      ]
-                    ),
-                  ]
-                )
-              ]
-            ),
+                child: Image(
+                  image: AssetImage("assets/logo.png")
+                ),
+              ),
+          
+              Expanded(child: SizedBox(height: double.maxFinite)),
+          
+              Row(
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text("asdasdasdasdasd"),
+                      const Text("azxczq"),
+                      const Text("qweqweqweqwe"),
+                    ]
+                  ),
+          
+                  SizedBox(width: 10.0),
+          
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text("asdasd"),
+                      const Text("asdasd"),
+                      const Text("asdasd"),
+                    ]
+                  ),
+                ]
+              )
+            ]
           ),
         )
       ),

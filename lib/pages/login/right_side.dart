@@ -14,6 +14,7 @@ class _RightSideWidgetState extends State<RightSideWidget> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
+      flex: 1,
       child: Center(
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 100.00),
@@ -224,7 +225,6 @@ class _RightSideWidgetState extends State<RightSideWidget> {
           ),
         )
       ),
-      flex: 1,
     );
   }
 }

@@ -17,11 +17,6 @@ class _LoginPageState extends State<LoginPage> {
         child: Row(
           children: [
             LeftSideWidget(),
-            VerticalDivider(
-              width: 5.0,
-              thickness: 10.0,
-              color: Colors.black,
-            ),
             RightSideWidget()
           ]
         )
