@@ -1,42 +1,26 @@
 import 'package:flutter/material.dart';
 
-class RectangleDesignBtn extends WidgetStateOutlinedBorder {
-  @override
-  OutlinedBorder copyWith({BorderSide? side}) {
-    // TODO: implement copyWith
-    throw UnimplementedError();
-  }
+class RectangularBtnShape extends WidgetStateProperty<OutlinedBorder> {
+  final double borderRadius;
+
+  RectangularBtnShape(this.borderRadius);
 
   @override
-  Path getInnerPath(Rect rect, {TextDirection? textDirection}) {
-    // TODO: implement getInnerPath
-    throw UnimplementedError();
-  }
-
-  @override
-  Path getOuterPath(Rect rect, {TextDirection? textDirection}) {
-    // TODO: implement getOuterPath
-    throw UnimplementedError();
-  }
-
-  @override
-  void paint(Canvas canvas, Rect rect, {TextDirection? textDirection}) {
-    // TODO: implement paint
-  }
-
-  @override
-  OutlinedBorder? resolve(Set<WidgetState> states) {
-    // TODO: implement resolve
+  OutlinedBorder resolve(Set<WidgetState> states) {
     return RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(2.5)
+      borderRadius: BorderRadius.circular(borderRadius)
     );
-  }
-
-  @override
-  ShapeBorder scale(double t) {
-    // TODO: implement scale
-    throw UnimplementedError();
   }
 }
 
+class RectangularBtnMinSize extends WidgetStateProperty<Size> {
+  final double height;
 
+  RectangularBtnMinSize(this.height);
+
+  @override
+  Size resolve(Set<WidgetState> states) {
+    return Size.fromHeight(height);
+  }
+  
+}

@@ -11,41 +11,42 @@ class _LeftSideWidgetState extends State<LeftSideWidget> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
+      flex: 1,
       child: Center(
         child: Container(
-          padding: EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
               Container(
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.black)
                 ),
-                child: Image(
+                child: const Image(
                   image: AssetImage("assets/logo.png")
                 ),
               ),
           
-              Expanded(child: SizedBox(height: double.maxFinite)),
+              const Expanded(child: SizedBox(height: double.maxFinite)),
           
-              Row(
+              const Row(
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text("asdasdasdasdasd"),
-                      const Text("azxczq"),
-                      const Text("qweqweqweqwe"),
+                      Text("asdasdasdasdasd"),
+                      Text("azxczq"),
+                      Text("qweqweqweqweasdasdasdasdasdasdas"),
                     ]
                   ),
           
                   SizedBox(width: 10.0),
           
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      const Text("asdasd"),
-                      const Text("asdasd"),
-                      const Text("asdasd"),
+                      Text("asdasdasasdasd"),
+                      Text("asdasd"),
+                      Text("asdaasdasdsd"),
                     ]
                   ),
                 ]
@@ -54,7 +55,6 @@ class _LeftSideWidgetState extends State<LeftSideWidget> {
           ),
         )
       ),
-      flex: 1,
     );
   }
 }

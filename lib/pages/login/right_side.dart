@@ -17,210 +17,219 @@ class _RightSideWidgetState extends State<RightSideWidget> {
       flex: 1,
       child: Center(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 100.00),
-          color: Colors.amberAccent,
+          padding: const EdgeInsets.symmetric(horizontal: 100.00),
           child: Form(
             key: _formKey,
-            child: Container(
-              color: Colors.blueAccent,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextFormField(
-                    textAlign: TextAlign.center,
-                    decoration: InputDecoration(
-                      hintText: "User Name",
-                      //label: Text("User Number"),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                      )
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextFormField(
+                  textAlign: TextAlign.center,
+                  decoration: const InputDecoration(
+                    hintText: "User Name",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                    )
+                  ),
+                ),
+            
+                const SizedBox(height: 2.5),
+            
+                TextFormField(
+                  textAlign: TextAlign.center,
+                  decoration: const InputDecoration(
+                    hintText: "Password",
+                    //label: Text("User Number"),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                    )
+                  ),
+                ),
+            
+                const SizedBox(height: 2.5),
+            
+                Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize: RectangularBtnMinSize(50.0),
+                          shape: RectangularBtnShape(2.5)
+                        ),
+                        onPressed: () {}, 
+                        child: const Text("7")
+                      ),
                     ),
-                  ),
-
-                  SizedBox(height: 2.5),
-
-                  TextFormField(
-                    textAlign: TextAlign.center,
-                    decoration: InputDecoration(
-                      hintText: "Password",
-                      //label: Text("User Number"),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                      )
+                    const SizedBox(width: 2.5),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize: RectangularBtnMinSize(50.0),
+                          shape: RectangularBtnShape(2.5)
+                        ),
+                        onPressed: () {}, 
+                        child: const Text("8")
+                      ),
                     ),
-                  ),
-
-                  SizedBox(height: 2.5),
-
-                  Row(
-                    children: [
-                      Expanded(
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: RectangleDesignBtn()
-                          ),
-                          onPressed: () {}, 
-                          child: Text("1")
+                    const SizedBox(width: 2.5),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize: RectangularBtnMinSize(50.0),
+                          shape: RectangularBtnShape(2.5)
                         ),
+                        onPressed: () {}, 
+                        child: const Text("9")
                       ),
-                      SizedBox(width: 2.5),
-                      Expanded(
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: RectangleDesignBtn()
-                          ),
-                          onPressed: () {}, 
-                          child: Text("1")
+                    ),
+                  ],
+                ),
+            
+                const SizedBox(height: 2.5),
+            
+                Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize: RectangularBtnMinSize(50.0),
+                          shape: RectangularBtnShape(2.5)
                         ),
+                        onPressed: () {}, 
+                        child: const Text("4")
                       ),
-                      SizedBox(width: 2.5),
-                      Expanded(
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: RectangleDesignBtn()
-                          ),
-                          onPressed: () {}, 
-                          child: Text("1")
+                    ),
+                    const SizedBox(width: 2.5),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize: RectangularBtnMinSize(50.0),
+                          shape: RectangularBtnShape(2.5)
                         ),
+                        onPressed: () {}, 
+                        child: const Text("5")
                       ),
-                    ],
-                  ),
-
-                  SizedBox(height: 2.5),
-
-                  Row(
-                    children: [
-                      Expanded(
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: RectangleDesignBtn()
-                          ),
-                          onPressed: () {}, 
-                          child: Text("1")
+                    ),
+                    const SizedBox(width: 2.5),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize: RectangularBtnMinSize(50.0),
+                          shape: RectangularBtnShape(2.5)
                         ),
+                        onPressed: () {}, 
+                        child: const Text("6")
                       ),
-                      SizedBox(width: 2.5),
-                      Expanded(
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: RectangleDesignBtn()
-                          ),
-                          onPressed: () {}, 
-                          child: Text("1")
+                    ),
+                  ],
+                ),
+            
+                const SizedBox(height: 2.5),
+            
+                Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize: RectangularBtnMinSize(50.0),
+                          shape: RectangularBtnShape(2.5)
                         ),
+                        onPressed: () {}, 
+                        child: const Text("1")
                       ),
-                      SizedBox(width: 2.5),
-                      Expanded(
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: RectangleDesignBtn()
-                          ),
-                          onPressed: () {}, 
-                          child: Text("1")
+                    ),
+                    const SizedBox(width: 2.5),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize: RectangularBtnMinSize(50.0),
+                          shape: RectangularBtnShape(2.5)
                         ),
+                        onPressed: () {}, 
+                        child: const Text("2")
                       ),
-                    ],
-                  ),
-
-                  SizedBox(height: 2.5),
-
-                  Row(
-                    children: [
-                      Expanded(
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: RectangleDesignBtn()
-                          ),
-                          onPressed: () {}, 
-                          child: Text("1")
+                    ),
+                    const SizedBox(width: 2.5),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize: RectangularBtnMinSize(50.0),
+                          shape: RectangularBtnShape(2.5)
                         ),
+                        onPressed: () {}, 
+                        child: const Text("3")
                       ),
-                      SizedBox(width: 2.5),
-                      Expanded(
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: RectangleDesignBtn()
-                          ),
-                          onPressed: () {}, 
-                          child: Text("1")
+                    ),
+                  ],
+                ),
+            
+                const SizedBox(height: 2.5),
+            
+                Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize: RectangularBtnMinSize(50.0),
+                          shape: RectangularBtnShape(2.5)
                         ),
+                        onPressed: () {}, 
+                        child: const Text("CLEAR")
                       ),
-                      SizedBox(width: 2.5),
-                      Expanded(
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: RectangleDesignBtn()
-                          ),
-                          onPressed: () {}, 
-                          child: Text("1")
+                    ),
+                    const SizedBox(width: 2.5),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize: RectangularBtnMinSize(50.0),
+                          shape: RectangularBtnShape(2.5)
                         ),
+                        onPressed: () {}, 
+                        child: const Text("0")
                       ),
-                    ],
-                  ),
-
-                  SizedBox(height: 2.5),
-
-                  Row(
-                    children: [
-                      Expanded(
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: RectangleDesignBtn()
-                          ),
-                          onPressed: () {}, 
-                          child: Text("1")
+                    ),
+                    const SizedBox(width: 2.5),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize: RectangularBtnMinSize(50.0),
+                          shape: RectangularBtnShape(2.5)
                         ),
+                        onPressed: () {}, 
+                        child: const Text(">")
                       ),
-                      SizedBox(width: 2.5),
-                      Expanded(
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: RectangleDesignBtn()
-                          ),
-                          onPressed: () {}, 
-                          child: Text("1")
+                    ),
+                  ],
+                ),
+            
+                const SizedBox(height: 2.5),
+            
+                Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize: RectangularBtnMinSize(50.0),
+                          shape: RectangularBtnShape(2.5)
                         ),
+                        onPressed: () {}, 
+                        child: const Text("LOGIN")
                       ),
-                      SizedBox(width: 2.5),
-                      Expanded(
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: RectangleDesignBtn()
-                          ),
-                          onPressed: () {}, 
-                          child: Text("1")
+                    ),
+                    const SizedBox(width: 2.5),
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          minimumSize: RectangularBtnMinSize(50.0),
+                          shape: RectangularBtnShape(2.5)
                         ),
+                        onPressed: () {}, 
+                        child: const Text("EXIT")
                       ),
-                    ],
-                  ),
-
-                  SizedBox(height: 2.5),
-
-                  Row(
-                    children: [
-                      Expanded(
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: RectangleDesignBtn()
-                          ),
-                          onPressed: () {}, 
-                          child: Text("1")
-                        ),
-                      ),
-                      SizedBox(width: 2.5),
-                      Expanded(
-                        child: ElevatedButton(
-                          style: ButtonStyle(
-                            shape: RectangleDesignBtn()
-                          ),
-                          onPressed: () {}, 
-                          child: Text("1")
-                        ),
-                      ),
-                    ],
-                  ),
-                ]
-              ),
+                    ),
+                  ],
+                ),
+              ]
             ),
           ),
         )

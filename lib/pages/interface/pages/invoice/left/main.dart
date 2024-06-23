@@ -41,30 +41,52 @@ class _LeftSideInvoiceInterfaceState extends State<LeftSideInvoiceInterface> {
 
   @override
   Widget build(BuildContext context) {
-    return DataTable(
-      headingRowHeight: 25.0,
-      border: TableBorder.all(),
-    
-      columns: [
-        DataColumn(
-          label: Text('Column A'),
+    return DataTable2(
+      columns: const <DataColumn2>[
+        DataColumn2(
+            label: const Text('Name'),
+            tooltip: 'Name',
+            //onSort: (int columnIndex, bool ascending) {}
         ),
-        DataColumn(
-          label: Text('Column B'),
-        ),
-        DataColumn(
-          label: Text('Column C'),
-        ),
-        DataColumn(
-          label: Text('Column D'),
-        ),
-        DataColumn(
-          label: Text('Column NUMBERS'),
+        DataColumn2(
+          label: const Text('Calories'),
+          tooltip: 'Calories',
           numeric: true,
+          //onSort: (int columnIndex, bool ascending) {},
         ),
-      ],
-    
+        DataColumn2(
+          label: const Text('Carbs'),
+          tooltip: 'Carbs',
+          numeric: true,
+          //onSort: (int columnIndex, bool ascending) {},
+        ),
+      ], 
       rows: []
     );
+    // return DataTable(
+    //   headingRowHeight: 25.0,
+    //   border: TableBorder.all(),
+    
+    //   columns: [
+    //     DataColumn(
+    //       label: Text('Column A'),
+    //     ),
+    //     DataColumn(
+    //       label: Text('Column B'),
+    //     ),
+    //     DataColumn(
+    //       label: Text('Column C'),
+    //     ),
+    //     DataColumn(
+    //       label: Text('Column D'),
+    //     ),
+    //     DataColumn(
+    //       label: Text('Column NUMBERS'),
+    //       numeric: true,
+    //     ),
+    //   ],
+    
+    //   rows: []
+    // );
   }
 }
