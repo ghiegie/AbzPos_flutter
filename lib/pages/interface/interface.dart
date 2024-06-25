@@ -1,4 +1,6 @@
 import 'package:abzpos_flutter/pages/interface/pages/invoice/main.dart';
+import 'package:abzpos_flutter/pages/interface/pages/payment/main.dart';
+import 'package:abzpos_flutter/pages/interface/pages/shift/main.dart';
 import 'package:flutter/material.dart';
 
 class MainInterface extends StatefulWidget {
@@ -30,18 +32,18 @@ class _MainInterfaceState extends State<MainInterface> {
             indicatorSize: TabBarIndicatorSize.tab,
             indicator: BoxDecoration(
               color: Theme.of(context).colorScheme.onPrimaryContainer,
-              borderRadius: BorderRadius.all(Radius.circular(5.0))
+              borderRadius: const BorderRadius.all(Radius.circular(5.0))
             ),
             tabs: widget.tabs
           ),
         ),
         body: Container(
           color: Colors.grey,
-          child: TabBarView(
+          child: const TabBarView(
             children: [
-              const InvoicePage(),
-              const Text("sample 2"),
-              const Text("sample 3"),
+              InvoicePage(),
+              PaymentPage(),
+              ShiftPage(),
             ]
           ),
         )

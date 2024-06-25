@@ -41,52 +41,152 @@ class _LeftSideInvoiceInterfaceState extends State<LeftSideInvoiceInterface> {
 
   @override
   Widget build(BuildContext context) {
-    return DataTable2(
-      columns: const <DataColumn2>[
-        DataColumn2(
-            label: const Text('Name'),
-            tooltip: 'Name',
-            //onSort: (int columnIndex, bool ascending) {}
-        ),
-        DataColumn2(
-          label: const Text('Calories'),
-          tooltip: 'Calories',
-          numeric: true,
-          //onSort: (int columnIndex, bool ascending) {},
-        ),
-        DataColumn2(
-          label: const Text('Carbs'),
-          tooltip: 'Carbs',
-          numeric: true,
-          //onSort: (int columnIndex, bool ascending) {},
-        ),
-      ], 
-      rows: []
-    );
-    // return DataTable(
-    //   headingRowHeight: 25.0,
-    //   border: TableBorder.all(),
-    
-    //   columns: [
-    //     DataColumn(
-    //       label: Text('Column A'),
-    //     ),
-    //     DataColumn(
-    //       label: Text('Column B'),
-    //     ),
-    //     DataColumn(
-    //       label: Text('Column C'),
-    //     ),
-    //     DataColumn(
-    //       label: Text('Column D'),
-    //     ),
-    //     DataColumn(
-    //       label: Text('Column NUMBERS'),
-    //       numeric: true,
-    //     ),
-    //   ],
-    
-    //   rows: []
+    // return LayoutBuilder(
+    //   builder: (ctx, cnstr) {
+    //     return Column(
+    //       children: [
+    //         SizedBox(
+    //           width: cnstr.maxWidth,
+    //           height: cnstr.maxHeight *  0.8,
+    //           child: Stack(
+    //             alignment: Alignment.centerRight,
+    //             fit: StackFit.loose,
+    //             children: [
+    //               DataTable2(
+    //                 headingRowColor: WidgetStateColor.resolveWith((states) => Colors.blue),
+    //                 border: TableBorder.all(
+    //                   color: Colors.black
+    //                 ),
+                          
+    //                 columns: widget.columnLabels.map((val) {
+    //                   return DataColumn2(
+    //                     label: Center(
+    //                       child: Text(val),
+    //                     )
+    //                   );
+    //                 }).toList(),
+                          
+    //                 rows: List<DataRow2>.generate(
+    //                   100,
+    //                   (val) {
+    //                     return const DataRow2(
+    //                       cells: [
+    //                         DataCell(Text('asdasd')),
+    //                         DataCell(Text('asdasd')),
+    //                         DataCell(Text('asdasd')),
+    //                         DataCell(Text('asdasd')),
+    //                       ]
+    //                     );
+    //                   }
+    //                 ),
+    //               ),
+            
+    //               Column(
+    //                 mainAxisAlignment: MainAxisAlignment.center,
+    //                 children: [
+    //                   FloatingActionButton(
+    //                     onPressed: () {},
+    //                     child: const Icon(Icons.add),
+    //                   ),
+    //                   const SizedBox(height: 5.0),
+    //                   FloatingActionButton(
+    //                     onPressed: () {},
+    //                     child: const Icon(Icons.remove),
+    //                   ),
+    //                   const SizedBox(height: 5.0),
+    //                   FloatingActionButton(
+    //                     onPressed: () {},
+    //                     child: const Icon(Icons.delete),
+    //                   ),
+    //                 ],
+    //               )
+    //             ]
+    //           ),
+    //         ),
+    //       ]
+    //     );
+    //   }
     // );
+
+    return Expanded(
+      child: Column(
+        children: [
+          Expanded(
+            child: Stack(
+              alignment: Alignment.centerRight,
+              fit: StackFit.loose,
+              children: [
+                DataTable2(
+                  headingRowColor: WidgetStateColor.resolveWith((states) => Colors.blue),
+                  border: TableBorder.all(
+                    color: Colors.black
+                  ),
+                        
+                  columns: widget.columnLabels.map((val) {
+                    return DataColumn2(
+                      label: Center(
+                        child: Text(val),
+                      )
+                    );
+                  }).toList(),
+                        
+                  rows: List<DataRow2>.generate(
+                    100,
+                    (val) {
+                      return const DataRow2(
+                        cells: [
+                          DataCell(Text('asdasd')),
+                          DataCell(Text('asdasd')),
+                          DataCell(Text('asdasd')),
+                          DataCell(Text('asdasd')),
+                        ]
+                      );
+                    }
+                  ),
+                ),
+          
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    FloatingActionButton(
+                      onPressed: () {},
+                      child: const Icon(Icons.add),
+                    ),
+                    const SizedBox(height: 5.0),
+                    FloatingActionButton(
+                      onPressed: () {},
+                      child: const Icon(Icons.remove),
+                    ),
+                    const SizedBox(height: 5.0),
+                    FloatingActionButton(
+                      onPressed: () {},
+                      child: const Icon(Icons.delete),
+                    ),
+                  ],
+                )
+              ]
+            ),
+          ),
+      
+          Container(
+            color: Theme.of(context).colorScheme.onSecondary,
+            width: double.maxFinite,
+            height: 100,
+            child: Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  TextButton(
+                    onPressed: () {}, 
+                    child: const Text("asdasda")
+                  ),
+                  const Text("asdasd"),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }

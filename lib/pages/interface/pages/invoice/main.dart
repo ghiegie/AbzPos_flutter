@@ -15,12 +15,12 @@ class _InvoicePageState extends State<InvoicePage> {
     return Row(
       children: [
         LeftSideInvoiceInterface(),
-        VerticalDivider(
+        const VerticalDivider(
           color: Colors.black,
-          width: 0,
-          thickness: 5.0,
+          width: 7.5,
+          thickness: 7.5,
         ),
-        RightSideInvoiceInterface(),
+        const RightSideInvoiceInterface(),
       ]
     );
   }

@@ -19,7 +19,7 @@ class App extends StatelessWidget {
         routes: [
           GoRoute(
             path: "/",
-            builder: _interfaceBuilder
+            builder: _mainBuilder
           )
         ]
       ),

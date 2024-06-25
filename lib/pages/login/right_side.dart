@@ -8,11 +8,24 @@ class RightSideWidget extends StatefulWidget {
   State<RightSideWidget> createState() => _RightSideWidgetState();
 }
 
+enum WhereFocus {
+  user, pass, none
+}
+
 class _RightSideWidgetState extends State<RightSideWidget> {
   final _formKey = GlobalKey<FormState>();
+  var whereFocus = WhereFocus.none;
 
   @override
   Widget build(BuildContext context) {
+    var userTxtCtrl = TextEditingController();
+    var userFocus = FocusNode();
+    userFocus.addListener(() {
+      if (userFocus.hasFocus) {
+        whereFocus = WhereFocus.user;
+      }
+    });
+
     return Expanded(
       flex: 1,
       child: Center(
@@ -24,6 +37,8 @@ class _RightSideWidgetState extends State<RightSideWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextFormField(
+                  focusNode: userFocus,
+                  controller: userTxtCtrl,
                   textAlign: TextAlign.center,
                   decoration: const InputDecoration(
                     hintText: "User Name",
@@ -39,7 +54,6 @@ class _RightSideWidgetState extends State<RightSideWidget> {
                   textAlign: TextAlign.center,
                   decoration: const InputDecoration(
                     hintText: "Password",
-                    //label: Text("User Number"),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(5.0)),
                     )
