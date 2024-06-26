@@ -9,17 +9,11 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 9, 36, 176),
-        )
-      ),
       routerConfig: GoRouter(
         routes: [
           GoRoute(
             path: "/",
-            builder: _mainBuilder
+            builder: _interfaceBuilder
           )
         ]
       ),

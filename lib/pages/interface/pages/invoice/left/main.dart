@@ -12,102 +12,8 @@ class LeftSideInvoiceInterface extends StatefulWidget {
 }
 
 class _LeftSideInvoiceInterfaceState extends State<LeftSideInvoiceInterface> {
-  // DataColumn Function(int) dataColGen(List<String> list) {
-  //   return (index) {
-  //     return DataColumn(
-  //       label: Container(
-  //         color: Colors.amberAccent,
-  //         child: Text(
-  //           list[index],
-  //           textAlign: TextAlign.center,
-  //         ),
-  //       )
-  //     );
-  //   };
-  // }
-
-  // DataRow2 Function(int) dataRowGen() {
-  //   return (index) {
-  //     return DataRow2(
-  //       cells: [
-  //         DataCell(Text("1qsdasd")),
-  //         DataCell(Text("1qsdasd")),
-  //         DataCell(Text("1qsdasd")),
-  //         DataCell(Text("1qsdasd")),
-  //       ]
-  //     );
-  //   };
-  // }
-
   @override
   Widget build(BuildContext context) {
-    // return LayoutBuilder(
-    //   builder: (ctx, cnstr) {
-    //     return Column(
-    //       children: [
-    //         SizedBox(
-    //           width: cnstr.maxWidth,
-    //           height: cnstr.maxHeight *  0.8,
-    //           child: Stack(
-    //             alignment: Alignment.centerRight,
-    //             fit: StackFit.loose,
-    //             children: [
-    //               DataTable2(
-    //                 headingRowColor: WidgetStateColor.resolveWith((states) => Colors.blue),
-    //                 border: TableBorder.all(
-    //                   color: Colors.black
-    //                 ),
-                          
-    //                 columns: widget.columnLabels.map((val) {
-    //                   return DataColumn2(
-    //                     label: Center(
-    //                       child: Text(val),
-    //                     )
-    //                   );
-    //                 }).toList(),
-                          
-    //                 rows: List<DataRow2>.generate(
-    //                   100,
-    //                   (val) {
-    //                     return const DataRow2(
-    //                       cells: [
-    //                         DataCell(Text('asdasd')),
-    //                         DataCell(Text('asdasd')),
-    //                         DataCell(Text('asdasd')),
-    //                         DataCell(Text('asdasd')),
-    //                       ]
-    //                     );
-    //                   }
-    //                 ),
-    //               ),
-            
-    //               Column(
-    //                 mainAxisAlignment: MainAxisAlignment.center,
-    //                 children: [
-    //                   FloatingActionButton(
-    //                     onPressed: () {},
-    //                     child: const Icon(Icons.add),
-    //                   ),
-    //                   const SizedBox(height: 5.0),
-    //                   FloatingActionButton(
-    //                     onPressed: () {},
-    //                     child: const Icon(Icons.remove),
-    //                   ),
-    //                   const SizedBox(height: 5.0),
-    //                   FloatingActionButton(
-    //                     onPressed: () {},
-    //                     child: const Icon(Icons.delete),
-    //                   ),
-    //                 ],
-    //               )
-    //             ]
-    //           ),
-    //         ),
-    //       ]
-    //     );
-    //   }
-    // );
-
     return Expanded(
       child: Column(
         children: [
@@ -117,10 +23,7 @@ class _LeftSideInvoiceInterfaceState extends State<LeftSideInvoiceInterface> {
               fit: StackFit.loose,
               children: [
                 DataTable2(
-                  headingRowColor: WidgetStateColor.resolveWith((states) => Colors.blue),
-                  border: TableBorder.all(
-                    color: Colors.black
-                  ),
+                  headingRowColor: HeadingRowColor(),
                         
                   columns: widget.columnLabels.map((val) {
                     return DataColumn2(
@@ -149,11 +52,15 @@ class _LeftSideInvoiceInterfaceState extends State<LeftSideInvoiceInterface> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     FloatingActionButton(
+                      backgroundColor: const Color.fromARGB(255, 61, 249, 67),
+                      foregroundColor: Colors.black,
                       onPressed: () {},
                       child: const Icon(Icons.add),
                     ),
                     const SizedBox(height: 5.0),
                     FloatingActionButton(
+                      backgroundColor: Colors.red,
+                      foregroundColor: Colors.white,
                       onPressed: () {},
                       child: const Icon(Icons.remove),
                     ),
@@ -169,7 +76,7 @@ class _LeftSideInvoiceInterfaceState extends State<LeftSideInvoiceInterface> {
           ),
       
           Container(
-            color: Theme.of(context).colorScheme.onSecondary,
+            color: const Color.fromARGB(255, 61, 249, 67),
             width: double.maxFinite,
             height: 100,
             child: Center(
@@ -178,7 +85,20 @@ class _LeftSideInvoiceInterfaceState extends State<LeftSideInvoiceInterface> {
                 children: [
                   TextButton(
                     onPressed: () {}, 
-                    child: const Text("asdasda")
+                    child: const Row(
+                      children: [
+                        Icon(
+                          Icons.local_grocery_store,
+                          color: Colors.white,
+                        ),
+                        Text(
+                          "asdasda",
+                          style: TextStyle(
+                            color: Colors.white
+                          ),
+                        )
+                      ]
+                    )
                   ),
                   const Text("asdasd"),
                 ],

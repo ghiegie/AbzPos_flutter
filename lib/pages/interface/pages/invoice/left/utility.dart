@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
 
-// DataColumn Function(int) dataColGen(List<String> list) {
-//   return (index) {
-//     return DataColumn(
-//       onSort: (index, asc) {
-        
-//       },
-//       label: Expanded(
-//         child: Container(
-//           color: Colors.amberAccent,
-//           child: Text(
-//             list[index],
-//             textAlign: TextAlign.center,
-//           ),
-//         ),
-//       )
-//     );
-//   };
-// }
+class HeadingRowColor extends WidgetStateProperty<Color> {
+  @override
+  Color resolve(Set<WidgetState> states) {
+    Color resColor = Colors.white;
+
+    if (states.contains(WidgetState.focused) || states.contains(WidgetState.hovered)) {
+      resColor = Colors.red;
+    }
+
+    if (states.contains(WidgetState.pressed)) {
+      resColor = Colors.red[600]!;
+    }
+
+    return resColor;
+  }
+}

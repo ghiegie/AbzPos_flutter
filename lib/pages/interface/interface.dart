@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class MainInterface extends StatefulWidget {
   final List<Tab> tabs = [
-    const Tab(text: "asdasdasd"),
+    const Tab(text: "INVOICE PAGE"),
     const Tab(text: "PAYMENT PAGE"),
     const Tab(text: "SHIFT PAGE"),
   ];
@@ -23,29 +23,24 @@ class _MainInterfaceState extends State<MainInterface> {
       length: widget.tabs.length, 
       child: Scaffold(
         appBar: AppBar(
-          // titleSpacing: 0.0,
-          // backgroundColor: Colors.blueGrey,
-          // title: const Text("sample"),
           title: TabBar(
-            dividerColor: Colors.transparent,
-            dividerHeight: 0.0,
+            dividerColor: const Color.fromARGB(255, 61, 249, 67),
+            dividerHeight: 5.0,
             indicatorSize: TabBarIndicatorSize.tab,
-            indicator: BoxDecoration(
-              color: Theme.of(context).colorScheme.onPrimaryContainer,
-              borderRadius: const BorderRadius.all(Radius.circular(5.0))
+            indicator: const BoxDecoration(
+              color: Color.fromARGB(255, 61, 249, 67),
+              borderRadius: BorderRadius.all(Radius.circular(5.0))
             ),
+            labelColor: Colors.black,
             tabs: widget.tabs
           ),
         ),
-        body: Container(
-          color: Colors.grey,
-          child: const TabBarView(
-            children: [
-              InvoicePage(),
-              PaymentPage(),
-              ShiftPage(),
-            ]
-          ),
+        body: const TabBarView(
+          children: [
+            InvoicePage(),
+            PaymentPage(),
+            ShiftPage(),
+          ]
         )
       )
     );

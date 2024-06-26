@@ -8,23 +8,23 @@ class RightSideWidget extends StatefulWidget {
   State<RightSideWidget> createState() => _RightSideWidgetState();
 }
 
-enum WhereFocus {
-  user, pass, none
-}
+// enum WhereFocus {
+//   user, pass, none
+// }
 
 class _RightSideWidgetState extends State<RightSideWidget> {
   final _formKey = GlobalKey<FormState>();
-  var whereFocus = WhereFocus.none;
+  // var whereFocus = WhereFocus.none;
 
   @override
   Widget build(BuildContext context) {
-    var userTxtCtrl = TextEditingController();
-    var userFocus = FocusNode();
-    userFocus.addListener(() {
-      if (userFocus.hasFocus) {
-        whereFocus = WhereFocus.user;
-      }
-    });
+    // var userTxtCtrl = TextEditingController();
+    // var userFocus = FocusNode();
+    // userFocus.addListener(() {
+    //   if (userFocus.hasFocus) {
+    //     whereFocus = WhereFocus.user;
+    //   }
+    // });
 
     return Expanded(
       flex: 1,
@@ -37,8 +37,8 @@ class _RightSideWidgetState extends State<RightSideWidget> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextFormField(
-                  focusNode: userFocus,
-                  controller: userTxtCtrl,
+                  // focusNode: userFocus,
+                  // controller: userTxtCtrl,
                   textAlign: TextAlign.center,
                   decoration: const InputDecoration(
                     hintText: "User Name",
@@ -67,6 +67,8 @@ class _RightSideWidgetState extends State<RightSideWidget> {
                     Expanded(
                       child: ElevatedButton(
                         style: ButtonStyle(
+                          foregroundColor: BtnFgColor(),
+                          backgroundColor: BtnBgColor(),
                           minimumSize: RectangularBtnMinSize(50.0),
                           shape: RectangularBtnShape(2.5)
                         ),
@@ -78,6 +80,8 @@ class _RightSideWidgetState extends State<RightSideWidget> {
                     Expanded(
                       child: ElevatedButton(
                         style: ButtonStyle(
+                          foregroundColor: BtnFgColor(),
+                          backgroundColor: BtnBgColor(),
                           minimumSize: RectangularBtnMinSize(50.0),
                           shape: RectangularBtnShape(2.5)
                         ),
@@ -89,6 +93,8 @@ class _RightSideWidgetState extends State<RightSideWidget> {
                     Expanded(
                       child: ElevatedButton(
                         style: ButtonStyle(
+                          foregroundColor: BtnFgColor(),
+                          backgroundColor: BtnBgColor(),
                           minimumSize: RectangularBtnMinSize(50.0),
                           shape: RectangularBtnShape(2.5)
                         ),
@@ -106,6 +112,8 @@ class _RightSideWidgetState extends State<RightSideWidget> {
                     Expanded(
                       child: ElevatedButton(
                         style: ButtonStyle(
+                          foregroundColor: BtnFgColor(),
+                          backgroundColor: BtnBgColor(),
                           minimumSize: RectangularBtnMinSize(50.0),
                           shape: RectangularBtnShape(2.5)
                         ),
@@ -117,6 +125,8 @@ class _RightSideWidgetState extends State<RightSideWidget> {
                     Expanded(
                       child: ElevatedButton(
                         style: ButtonStyle(
+                          foregroundColor: BtnFgColor(),
+                          backgroundColor: BtnBgColor(),
                           minimumSize: RectangularBtnMinSize(50.0),
                           shape: RectangularBtnShape(2.5)
                         ),
@@ -128,6 +138,8 @@ class _RightSideWidgetState extends State<RightSideWidget> {
                     Expanded(
                       child: ElevatedButton(
                         style: ButtonStyle(
+                          foregroundColor: BtnFgColor(),
+                          backgroundColor: BtnBgColor(),
                           minimumSize: RectangularBtnMinSize(50.0),
                           shape: RectangularBtnShape(2.5)
                         ),
@@ -145,6 +157,8 @@ class _RightSideWidgetState extends State<RightSideWidget> {
                     Expanded(
                       child: ElevatedButton(
                         style: ButtonStyle(
+                          foregroundColor: BtnFgColor(),
+                          backgroundColor: BtnBgColor(),
                           minimumSize: RectangularBtnMinSize(50.0),
                           shape: RectangularBtnShape(2.5)
                         ),
@@ -156,6 +170,8 @@ class _RightSideWidgetState extends State<RightSideWidget> {
                     Expanded(
                       child: ElevatedButton(
                         style: ButtonStyle(
+                          foregroundColor: BtnFgColor(),
+                          backgroundColor: BtnBgColor(),
                           minimumSize: RectangularBtnMinSize(50.0),
                           shape: RectangularBtnShape(2.5)
                         ),
@@ -167,6 +183,8 @@ class _RightSideWidgetState extends State<RightSideWidget> {
                     Expanded(
                       child: ElevatedButton(
                         style: ButtonStyle(
+                          foregroundColor: BtnFgColor(),
+                          backgroundColor: BtnBgColor(),
                           minimumSize: RectangularBtnMinSize(50.0),
                           shape: RectangularBtnShape(2.5)
                         ),
@@ -184,6 +202,8 @@ class _RightSideWidgetState extends State<RightSideWidget> {
                     Expanded(
                       child: ElevatedButton(
                         style: ButtonStyle(
+                          foregroundColor: BtnFgColor(),
+                          backgroundColor: BtnBgColor(),
                           minimumSize: RectangularBtnMinSize(50.0),
                           shape: RectangularBtnShape(2.5)
                         ),
@@ -195,6 +215,8 @@ class _RightSideWidgetState extends State<RightSideWidget> {
                     Expanded(
                       child: ElevatedButton(
                         style: ButtonStyle(
+                          foregroundColor: BtnFgColor(),
+                          backgroundColor: BtnBgColor(),
                           minimumSize: RectangularBtnMinSize(50.0),
                           shape: RectangularBtnShape(2.5)
                         ),
@@ -206,11 +228,13 @@ class _RightSideWidgetState extends State<RightSideWidget> {
                     Expanded(
                       child: ElevatedButton(
                         style: ButtonStyle(
+                          foregroundColor: BtnFgColor(),
+                          backgroundColor: BtnBgColor(),
                           minimumSize: RectangularBtnMinSize(50.0),
                           shape: RectangularBtnShape(2.5)
                         ),
                         onPressed: () {}, 
-                        child: const Text(">")
+                        child: const Icon(Icons.arrow_right)
                       ),
                     ),
                   ],
@@ -223,6 +247,8 @@ class _RightSideWidgetState extends State<RightSideWidget> {
                     Expanded(
                       child: ElevatedButton(
                         style: ButtonStyle(
+                          foregroundColor: BtnFgColor(),
+                          backgroundColor: BtnBgColor(),
                           minimumSize: RectangularBtnMinSize(50.0),
                           shape: RectangularBtnShape(2.5)
                         ),
@@ -234,6 +260,8 @@ class _RightSideWidgetState extends State<RightSideWidget> {
                     Expanded(
                       child: ElevatedButton(
                         style: ButtonStyle(
+                          foregroundColor: BtnFgColor(),
+                          backgroundColor: BtnBgColor(),
                           minimumSize: RectangularBtnMinSize(50.0),
                           shape: RectangularBtnShape(2.5)
                         ),
