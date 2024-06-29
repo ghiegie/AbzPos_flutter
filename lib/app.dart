@@ -1,3 +1,4 @@
+import 'package:abzpos_flutter/pages/activity_admin_audit_trail/main.dart';
 import 'package:abzpos_flutter/pages/interface/interface.dart';
 import 'package:abzpos_flutter/pages/login/login.dart';
 import 'package:flutter/material.dart';
@@ -9,11 +10,12 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       routerConfig: GoRouter(
         routes: [
           GoRoute(
             path: "/",
-            builder: _interfaceBuilder
+            builder:_activityAdminAuditTrailBuilder
           )
         ]
       ),
@@ -26,5 +28,9 @@ class App extends StatelessWidget {
 
   Widget _interfaceBuilder(BuildContext ctx, GoRouterState state) {
     return MainInterface();
+  }
+
+  Widget _activityAdminAuditTrailBuilder(BuildContext ctx, GoRouterState state) {
+    return AcitvityAdminAuditTrail();
   }
 }
