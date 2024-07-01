@@ -1,4 +1,6 @@
 import 'package:abzpos_flutter/pages/activity_admin_audit_trail/main.dart';
+import 'package:abzpos_flutter/pages/activity_admin_backup/main.dart';
+import 'package:abzpos_flutter/pages/activity_admin_bank_payment/main.dart';
 import 'package:abzpos_flutter/pages/interface/interface.dart';
 import 'package:abzpos_flutter/pages/login/login.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +17,7 @@ class App extends StatelessWidget {
         routes: [
           GoRoute(
             path: "/",
-            builder:_activityAdminAuditTrailBuilder
+            builder: _activityAdminBankPaymentBuilder
           )
         ]
       ),
@@ -31,6 +33,14 @@ class App extends StatelessWidget {
   }
 
   Widget _activityAdminAuditTrailBuilder(BuildContext ctx, GoRouterState state) {
-    return AcitvityAdminAuditTrail();
+    return ActivityAdminAuditTrail();
+  }
+
+  Widget _activityAdminBackupBuilder(BuildContext ctx, GoRouterState state) {
+    return ActivityAdminBackup();
+  }
+
+  Widget _activityAdminBankPaymentBuilder(BuildContext ctx, GoRouterState state) {
+    return ActivityAdminBankPayment();
   }
 }

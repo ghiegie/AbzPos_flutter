@@ -1,14 +1,14 @@
 import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
 
-class AcitvityAdminAuditTrail extends StatefulWidget {
-  const AcitvityAdminAuditTrail({super.key});
+class ActivityAdminAuditTrail extends StatefulWidget {
+  const ActivityAdminAuditTrail({super.key});
 
   @override
-  State<AcitvityAdminAuditTrail> createState() => _AcitvityAdminAuditTrailState();
+  State<ActivityAdminAuditTrail> createState() => _ActivityAdminAuditTrailState();
 }
 
-class _AcitvityAdminAuditTrailState extends State<AcitvityAdminAuditTrail> {
+class _ActivityAdminAuditTrailState extends State<ActivityAdminAuditTrail> {
   // DateTime? _date;
   final _fromDate = TextEditingController();
   final _toDate = TextEditingController();
